@@ -62,6 +62,21 @@ print(x)
 print(x['a'])
 print(type(x))
 
+print("dictionary 예제 =========")
+x['c'] = 10
+print(x)
+print(x['c'])
+#print(x['d']) # KeyError: 'd'
+
+del x['a'] # 딕셔너리에서 특정 키값 지우기
+print(x)
+
+print(x.keys())
+print(x.values())
+print(x.items())
+
+print(x.clear()) # 딕셔너리 지우기
+
 # 정오표
 example = {
     'python': [True, False, True, True, True, True, True, False, False, True],
@@ -73,7 +88,7 @@ print(example)
 print(example['python'])
 print(example['python'][1])
 
-# 문제 답안
+# 문제 답안21323123
 python_description = [
     {
         'answer': 1,
