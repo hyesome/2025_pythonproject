@@ -28,10 +28,54 @@ print(x[0])  #index : 몇번째 있는가
 print(x[3])
 print(type(x))
 
+x = x * 2
+print("x * 2 : ", x)
+
+x = [1, 2, 3, 4, 5]
+print("slicing=========")
+print(x[2:5]) #[start_index : end_index+1]
+print("append=========")
+x.append(7)
+print(x)
+print("insert=========")
+x.insert(1, 9)
+print(x)
+print("remove=========")
+x.remove(1) # 인덱스가 아닌 값을 지우는 함수
+print(x)
+print("9->6=========")
+x[0] = 6
+print(x)
+
+# 참조할수 없는 위치를 참조했을때 (배열 길이 이상)
+# IndexError: list assignment index out of range
+# x[7] = 1
+
+print("배열의 길이=========")
+print(len(x))
+
+print("배열의 마지막 인덱스=========")
+print(len(x)-1)
+
 x = {'a':100, 'b':200}  #dictionary   key:value
 print(x)
 print(x['a'])
 print(type(x))
+
+print("dictionary 예제 =========")
+x['c'] = 10
+print(x)
+print(x['c'])
+#print(x['d']) # KeyError: 'd'
+
+del x['a'] # 딕셔너리에서 특정 키값 지우기
+print(x)
+
+print(x.keys())
+print(x.values())
+print(x.items())
+
+print(x.clear()) # 딕셔너리 지우기
 
 # 정오표
 example = {
@@ -44,7 +88,7 @@ print(example)
 print(example['python'])
 print(example['python'][1])
 
-# 문제 답안
+# 문제 답안21323123
 python_description = [
     {
         'answer': 1,
