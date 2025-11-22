@@ -121,8 +121,11 @@ def get_score(student_answer, correct_answer):
     return score
 
 for student in test:
+    if student['name'] == 'ccc': # 배열 반복에서 스킵하는 방법
+        continue
 
     print("학생", student['name'], "==================")
+
     math_score = get_score(student['math'], correct_answer['math'])
     korean_score = get_score(student['korean'], correct_answer['korean'])
     english_score = get_score(student['english'], correct_answer['english'])
