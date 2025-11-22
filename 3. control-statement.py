@@ -54,3 +54,5 @@ def repeat_function():
         print_score()
         i= i +1
 
+# 함수 호출 방법
+# repeat_function()
