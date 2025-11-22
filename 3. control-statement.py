@@ -126,6 +126,9 @@ for student in test:
 
     print("학생", student['name'], "==================")
 
+    # for 중첩
+    # student.keys(), (이름이거나, 학번인 경우) or (배열이 아닌경우) continue
+
     math_score = get_score(student['math'], correct_answer['math'])
     korean_score = get_score(student['korean'], correct_answer['korean'])
     english_score = get_score(student['english'], correct_answer['english'])
