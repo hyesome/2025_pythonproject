@@ -19,29 +19,23 @@ def print_score():
 
 def print_even():
     input_number = int(input("숫자를 입력하세요."))
-    input_number = 1
     index = 1
 
-    print("짝수 출력 ---->")
     while index <= input_number:
         if index % 2 == 0:
             print(index)
         index = index + 1
 
 
-def print_fibonacci_type1():
+def print_fibonacci_with_list():
     input_number = int(input("숫자를 입력하세요."))
-    print("피보나치 수열 with list")
     list = [1,1]
 
     while list[-1] <= input_number:
         print(list[-1])
         list.append(list[-1] + list[-2])
 
-
-    print("피보나치 수열 without list")
-
-def print_fibonacci_type2():
+def print_fibonacci_with_variables():
     input_number = int(input("숫자를 입력하세요."))
     a = 1
     b = 1
