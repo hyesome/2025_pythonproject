@@ -20,15 +20,33 @@ def updown():
     # random.randrange ( n, m )   n <= result < m
     print("WELCOME TO UP DOWN")
     result = random.randrange(1, 100)
+    print("랜덤값이 생성되었습니다. (1이상 100미만)")
+    is_success = False
+    count = 5
+
+    while count > 0:
+        user_input = int(input("값을 입력하세요:"))
+        count = count - 1
+        if user_input > result:
+            print("DOWN! 남은횟수 :", count)
+        elif user_input < result:
+            print("UP! 남은횟수 :", count)
+        else:
+            is_success = True
+            break
+
+    if is_success:
+        print("정답입니다! 짝짝짝!")
+    else:
+        print("실패하셨습니다 ㅠㅠ 정답은 ", result)
+
 
 def quiz():
     print("WELCOME TO QUIZ!")
 
+
 def stop_watch():
     print("WELCOME TO UP STOPWATCH")
-    # random 초를 제공하면 ex) 7초
-    start = time.time()
-
 
 
 while True:
