@@ -47,6 +47,15 @@ def quiz():
 
 def stop_watch():
     print("WELCOME TO UP STOPWATCH")
+    seconds = random.randrange(1, 6)
+    start = time.time()
+    print("게임 시작! ", seconds, "초 후 c를 누르세요!")
+    input("")
+    end = time.time()
+    if seconds - 0.3 <= end-start <= seconds + 0.3:
+        print("성공! 소요시간:", end-start)
+    else:
+        print("실패! 소요시간:", end-start)
 
 
 while True:
