@@ -41,9 +41,48 @@ def updown():
         print("실패하셨습니다 ㅠㅠ 정답은 ", result)
 
 
+word_array = [
+    {'kr': '사과', 'en': 'apple'},
+    {'kr': '바나나', 'en': 'banana'},
+    {'kr': '포도', 'en': 'grape'},
+    {'kr': '멜론', 'en': 'melon'},
+    {'kr': '레몬', 'en': 'lemon'},
+    {'kr': '수박', 'en': 'watermelon'},
+    {'kr': '복숭아', 'en': 'peach'},
+]
+
+def short_answer_quiz():
+    print("주관식 문제!")
+
+    word = word_array[random.randrange(0, len(word_array))]
+    print(word['en'])
+    answer = input("뜻은 무엇일까요?")
+
+    if answer == word['kr']:
+        print("정답!")
+        return True
+    else:
+        print("오답! 정답은 ", word['kr'] )
+        return False
+
+
+def choice_quiz():
+    print("객관식 문제!")
+
+
 def quiz():
     print("WELCOME TO QUIZ!")
+    score = 0
+    rand = random.randrange(1,3)
+    for i in range(5):
+        is_correct = False
+        if rand % 2 == 1:
+            is_corrct = short_answer_quiz()
+        else:
+            is_corrct = choice_quiz()
 
+        if is_correct:
+            score += 20
 
 def stop_watch():
     print("WELCOME TO UP STOPWATCH")
