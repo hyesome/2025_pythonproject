@@ -69,20 +69,23 @@ def short_answer_quiz():
 def choice_quiz():
     print("객관식 문제!")
 
+    return True
+
 
 def quiz():
     print("WELCOME TO QUIZ!")
     score = 0
     rand = random.randrange(1,3)
     for i in range(5):
-        is_correct = False
         if rand % 2 == 1:
-            is_corrct = short_answer_quiz()
+            is_correct = short_answer_quiz()
         else:
-            is_corrct = choice_quiz()
+            is_correct = choice_quiz()
 
         if is_correct:
             score += 20
+
+    print("총점은! ", score)
 
 def stop_watch():
     print("WELCOME TO UP STOPWATCH")
