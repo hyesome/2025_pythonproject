@@ -1,3 +1,6 @@
+import random
+import time
+
 def print_times_table(number: int):
     print(number, "*", 1, "=", number*1)
     print(number, "*", 2, "=", number*2)
@@ -13,13 +16,37 @@ def example_function(input_arg: int) -> int:
     print("숫자 형태를 입력받아서 다른 숫자형태를 반환")
     return input_arg + 5
 
+def updown():
+    # random.randrange ( n, m )   n <= result < m
+    print("WELCOME TO UP DOWN")
+    result = random.randrange(1, 100)
+
+def quiz():
+    print("WELCOME TO QUIZ!")
+
+def stop_watch():
+    print("WELCOME TO UP STOPWATCH")
+    # random 초를 제공하면 ex) 7초
+    start = time.time()
+
+
 
 while True:
+    print('''
+    ================메뉴================
+    A. Up & Down 게임
+    B. 영어 낱말 맞추기
+    C. Stop watch 게임
+    Z. 프로그램 종료
+    ====================================
+    ''')
     user_input = input("값을 입력하세요 : ")
 
-    if user_input.lower() == "z":
+    if user_input.lower() == "a":
+        updown()
+    elif user_input.lower() == "b":
+        quiz()
+    elif user_input.lower() == "c":
+        stop_watch()
+    elif user_input.lower() == "z":
         break
-
-    # test
-
-    print_times_table(int(user_input))
